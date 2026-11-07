@@ -16,8 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   body{background:radial-gradient(1200px 600px at 50% -10%,rgba(150,108,38,.10),transparent 60%),#050403}
-  .hero-bg img{filter:grayscale(1) contrast(1.08) brightness(.95)}
-  .pessoa img{filter:grayscale(1) contrast(1.05) drop-shadow(0 30px 50px rgba(0,0,0,.6))}
+
   :root{
     --bg:#050403;
     --bg-2:#0b0907;
@@ -371,6 +370,7 @@
     .hv .hero-txt{text-align:center}
     .hv .logo-bf{margin:20px auto calc(100vw * 224 / 900 + 10px);max-width:260px}
     .hv .hero-bg img{margin-top:calc(198px - 100vw * 76 / 900)}
+    .hv .hero-bg img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 90px);mask-image:linear-gradient(180deg,transparent 0,#000 90px)}
     .hv .checks{text-align:left;margin-left:auto;margin-right:auto}
     .hv .video{margin-left:auto;margin-right:auto}
     .btn-grande{width:100%}
@@ -384,8 +384,6 @@
   /* ===== CARA DE BLACK ===== */
   :root{--bg:#000;--bg-2:#080808}
   body{background:#000!important}
-  .hero-bg img{filter:grayscale(1) contrast(1.15) brightness(.9)!important}
-  .pessoa img{filter:grayscale(1) contrast(1.08) drop-shadow(0 30px 50px rgba(0,0,0,.7))!important}
   .hv::after{content:"BLACK";position:absolute;left:-1vw;bottom:-4vw;z-index:0;font-weight:800;font-size:26vw;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(201,169,107,.22);pointer-events:none}
   .faixa{background:linear-gradient(90deg,#9c7d45,#e8d6a8,#c9a96b,#e8d6a8,#9c7d45);border:0}
   .faixa span{color:#0a0805;font-weight:800}
