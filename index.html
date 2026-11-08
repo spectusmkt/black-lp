@@ -324,6 +324,7 @@
   .opcao.destaque{border-color:var(--ouro);background:rgba(201,169,107,.08);box-shadow:0 18px 40px -14px rgba(201,169,107,.45)}
   .opcao.destaque .op-cta{color:#14100a;border:0;background:linear-gradient(180deg,#ecdcb2,var(--ouro) 70%)}
   .link-whats{display:inline-block;margin-top:12px;font-size:.85rem;color:#7ff0a8;text-decoration:underline;text-underline-offset:3px}
+  .link-aluno{display:block;margin-top:10px}
   .aviso-bonus{margin-top:26px;padding:16px 18px;border-radius:12px;font-size:.88rem;line-height:1.5;color:#f3d4d6;background:rgba(229,51,59,.1);border:1px solid rgba(255,90,97,.5);text-align:left}
   .aviso-bonus b{display:block;color:#fff;margin-bottom:4px}
 
@@ -597,6 +598,7 @@ src="https://www.facebook.com/tr?id=1456216939376794&ev=PageView&noscript=1" alt
       </div>
       <p class="seguro">🔒 Pagamento seguro · Garantia de 7 dias</p>
       <a class="link-whats js-whats" href="#" target="_blank" rel="noopener">Dúvidas sobre o pagamento? Fale com a equipe no WhatsApp</a>
+      <a class="link-whats link-aluno js-aluno" href="https://wa.me/5545933005922?text=Ol%C3%A1%21%20J%C3%A1%20sou%20aluno(a)%20do%20IBPROF%20e%20quero%20saber%20a%20minha%20condi%C3%A7%C3%A3o%20na%20Black%20Friday." target="_blank" rel="noopener">Já é aluno(a) do IBPROF? Fale com a equipe sobre a sua condição</a>
 
       <div class="aviso-bonus js-com-bonus">
         <b>⚠️ Os bônus relâmpago valem só até segunda-feira, 09/11, às 23h59.</b>
@@ -712,7 +714,7 @@ src="https://www.facebook.com/tr?id=1456216939376794&ev=PageView&noscript=1" alt
       <details><summary>É tudo online?</summary><p>Sim, 100% online e no seu ritmo, com aulas gravadas. Na Pós, cerca de 2 horas por semana.</p></details>
       <details><summary>Não tenho tempo. Vou conseguir acompanhar?</summary><p>As aulas são gravadas e você assiste quando puder. Não é a sua rotina que se encaixa na Pós: é a Pós que se encaixa na sua rotina.</p></details>
       <details><summary>Posso parcelar?</summary><p>Sim: 18x de R$ 197 no boleto ou no cartão recorrente, que não ocupa o limite do cartão, ou 12x de R$ 247 no cartão de crédito. À vista, R$ 2.497.</p></details>
-      <details><summary>Já sou aluno(a). Preciso pagar de novo pelo que já tenho?</summary><p>Não. Fale com a equipe no WhatsApp que a gente monta a sua condição. <a class="js-whats" href="#" target="_blank" rel="noopener">Falar com a equipe</a></p></details>
+      <details><summary>Já sou aluno(a). Preciso pagar de novo pelo que já tenho?</summary><p>Não. Fale com a equipe no WhatsApp que a gente monta a sua condição. <a class="js-aluno" href="https://wa.me/5545933005922?text=Ol%C3%A1%21%20J%C3%A1%20sou%20aluno(a)%20do%20IBPROF%20e%20quero%20saber%20a%20minha%20condi%C3%A7%C3%A3o%20na%20Black%20Friday." target="_blank" rel="noopener">Sou aluno(a), quero minha condição</a></p></details>
       <details class="js-com-bonus"><summary>Até quando valem os bônus?</summary><p>A Plataforma de Jogos, a aula do Site com IA e a mentoria valem só até segunda-feira, 09/11, às 23h59. A Oficina Professor Criativo continua na oferta depois disso.</p></details>
       <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não for o que esperava, devolvemos o seu dinheiro.</p></details>
     </div>
@@ -807,6 +809,7 @@ var CONFIG = {
       if(window.fbq) window.fbq('track','InitiateCheckout',{content_name:'Black Friday IBPROF',content_category:plano,value:VALOR[plano]||2497,currency:'BRL'});
     });
   });
+  cada('.js-aluno',function(a){a.addEventListener('click',function(){if(window.fbq) window.fbq('track','Contact',{content_name:'Black Friday IBPROF - aluno'});});});
   cada('.js-whats',function(a){
     if(!CONFIG.whatsapp){a.hidden=true;return;}
     a.href=CONFIG.whatsapp;
